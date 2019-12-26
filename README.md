@@ -23,4 +23,10 @@ $ git branch -d <branch_name>
 # Force a delition of a local branch
 # -D stands for --delete --force
 $ git branch -D <branch_name>
+
+#List only the remote branches
+# git branch -r
+
+#List all the local & remote branches
+# git branch -a
 ```
