@@ -5,6 +5,24 @@
 > The main purpose of this list of git commands is to help other open source contributors to get started with the usage of git. Some of these commands have helped me solve some of the problems 
 that I have encountered while learning git.
 
+## Managing multiple git credentials:
+> Say you want to be using multiple git accounts.Managing multiple git accounts usin OSX can be a little bit of a burden if you're trying to pull & push through HTTPS protocol as you have to be erasing the credentials that OSX stores in its built in keychaing application every time you need to interact with your remotes. so for that the best option is to authenticate each Github account with an SSH key.
+
+Though if you wanna be interacting with git through HTTPS protocol,you could do that by erasing your credentials every time you want to change the commit's author and email.
+
+In order to reset the credentials that OSX stores in its keychain application you need to do the following :
+
+```sh
+$ git credential-osxkeychain erase
+host=github.com
+protocol=https
+<press return>
+```
+After this,the next time you try to interact with your remote,git will prompt you to set you Git username and email.
+Configuring an SSH Key for each of your accounts would be done as following : 
+
+
+TODO: To add process of configuring account using SSH
 
 ```sh
 # Use it to set your own Git email to a local repository
