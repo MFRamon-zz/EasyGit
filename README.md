@@ -13,6 +13,12 @@ $ git config user.email "<email>"
 # Use it to set your own Git username to a local repository
 $ git config user.name "<username>"
 
+# Show the current configuration for your git repository such as the Fetch / Push URL, remote and local branches
+$ git remote show <remote>
+
+# Show the remote tracking branch for each of the branches
+$ git branch -vv
+
 # Create and checkout to a new branch
 $ git checkout -b <new_branch_name>
 
@@ -64,5 +70,8 @@ $ git stash list
 $ git stash drop <stash_item_identifier>
 
 # Apply a stash given its identifier onto your working tree but still kepp it your stash
-$ git stash apply <stash_item_indentifier> 
+$ git stash apply <stash_item_indentifier>
+
+# 
+
 ```
