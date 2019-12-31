@@ -21,7 +21,6 @@ protocol=https
 After this,the next time you try to interact with your remote,git will prompt you to set you Git username and email.
 Configuring an SSH Key for each of your accounts would be done as following : 
 
-
 TODO: To add process of configuring account using SSH
 
 ```sh
@@ -54,7 +53,7 @@ $ git merge <remote>/<branch_name>
 $ git branch -d <branch_name>
 
 # Delete a remote branch 
-# git push <remote> -d <bramch_name>
+$ git push <remote> -d <bramch_name>
 
 # Force a delition of a local branch
 # -D stands for --delete --force
@@ -89,7 +88,4 @@ $ git stash drop <stash_item_identifier>
 
 # Apply a stash given its identifier onto your working tree but still kepp it your stash
 $ git stash apply <stash_item_indentifier>
-
-# 
-
 ```
