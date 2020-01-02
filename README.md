@@ -23,6 +23,40 @@ Configuring an SSH Key for each of your accounts would be done as following :
 
 TODO: To add process of configuring account using SSH
 
+This is a basic workflow on how to start a git repo : 
+
+Inside your projects root directoy add a README.md file that explains a little bit about what the repo is about:
+
+# Create that file in Terminal by doing
+
+```sh
+# Create a README.md with the most important information
+$ touch <file_name>
+
+# Create .git subdirectory to start the new repo
+$ git init
+
+# OPTIONAL : Verify if the URL for pushing and fetching is already set otherwise set it :
+$ git remote add <remote_name> <repo_url>
+ 
+# After having it added just verify it was set correctly
+$ git remote show <remote_name>
+
+# If push/fetch URLS are set,you're ready to start doing by doing the next workflow
+$ git add <path_to_file_for_commit>
+
+# Save your commit
+$ git commit -m "<commit_message"
+```
+You are ready to push to your remote branches by doing : 
+
+$ git push origin 
+
+If you haven't linked you local branch to a remote tracking branch the push won't work so for that you'll need to add the reference to the branch you want to push in your remote
+
+$ git push -u <renote_name> <remote_tracking_branch>
+
+
 ```sh
 # Use it to set your own Git email to a local repository
 $ git config user.email "<email>"
@@ -88,9 +122,6 @@ $ git stash drop <stash_item_identifier>
 
 # Apply a stash given its identifier onto your working tree but still kepp it your stash
 $ git stash apply <stash_item_indentifier>
-
-# Set a remote url for a repo
-$ git remote add <remote_name> <repo_url>
 
 git reset --hard old_sha1
 git push --force upstream master:master
