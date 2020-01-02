@@ -88,4 +88,10 @@ $ git stash drop <stash_item_identifier>
 
 # Apply a stash given its identifier onto your working tree but still kepp it your stash
 $ git stash apply <stash_item_indentifier>
+
+# Set a remote url for a repo
+$ git remote add <remote_name> <repo_url>
+
+git reset --hard old_sha1
+git push --force upstream master:master
 ```
