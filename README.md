@@ -23,6 +23,30 @@ Configuring an SSH Key for each of your accounts would be done as following :
 
 TODO: To add process of configuring account using SSH
 
+Firstly you will to generate the ssh public & private key using the e-mail address linked with your Git account
+
+You could do so by doing :
+```sh
+# Generates the key
+$ ssh-keygen -t rsa -C "<email_address>"
+
+# Set the name for the keys
+# Enter a passphrase
+```
+
+After having the keys configured,inside you $HOME directory do the following :
+# cd ~/.ssh
+# touch config
+# open config
+
+Add the following lines that'll work to configure the git host that the key will be linked to
+
+#Personal Github Account
+Host github.com-<username>
+	HostName github.com # Here goes the domain for the Host
+	User git 
+	IdentityFile ~/.ssh/<ssh_key_file_name>
+
 This is a basic workflow on how to start a git repo : 
 
 Inside your projects root directoy add a README.md file that explains a little bit about what the repo is about:
