@@ -147,6 +147,9 @@ $ git stash drop <stash_item_identifier>
 # Apply a stash given its identifier onto your working tree but still kepp it your stash
 $ git stash apply <stash_item_indentifier>
 
+# Cherry pick a commit 
+$ git cherry-pick -x <commit_hash>
+
 git reset --hard old_sha1
 git push --force upstream master:master
 ```
