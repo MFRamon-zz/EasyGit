@@ -92,6 +92,17 @@ $ git push -u <renote_name> <remote_tracking_branch>
 
 ## Easy Git Commands
 
+## General config
+```sh
+# Use it to set your own Git email to a local repository
+$ git config user.email <"email">
+
+# Use it to set your own Git username to a local repository
+$ git config user.name <"username">
+
+# Show the current configuration for your git repository such as the Fetch / Push URL, remote and local branches
+$ git remote show <remote>
+```
 
 
 ## Stashing
@@ -133,17 +144,6 @@ $ git branch -a
 
 # How to rename a local branch
 $ git branch -m <old_branch_name> <new_branch_name>
-```
-
-```sh
-# Use it to set your own Git email to a local repository
-$ git config user.email <"email">
-
-# Use it to set your own Git username to a local repository
-$ git config user.name <"username">
-
-# Show the current configuration for your git repository such as the Fetch / Push URL, remote and local branches
-$ git remote show <remote>
 
 # Create and checkout to a new branch
 $ git checkout -b <new_branch_name>
@@ -159,7 +159,9 @@ $ git merge <remote>/<branch_name>
 
 # Delete a remote branch 
 $ git push <remote> -d <bramch_name>
+```
 
+```sh
 # Delete all stale references from the upstream branches so they can be updated on your local
 $ git remote update —prune
 
