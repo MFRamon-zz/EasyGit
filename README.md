@@ -5,7 +5,7 @@
 > The main purpose of this list of git commands is to help other open source contributors to get started with the usage of git. Some of these commands have helped me solve some of the problems 
 that I have encountered while learning git.
 
-## Managing multiple git credentials:
+## Managing multiple git credentials on OS X:
 > Say you want to be using multiple git accounts.Managing multiple git accounts usin OSX can be a little bit of a burden if you're trying to pull & push through HTTPS protocol as you have to be erasing the credentials that OSX stores in its built in keychaing application every time you need to interact with your remotes. so for that the best option is to authenticate each Github account with an SSH key.
 
 Though if you wanna be interacting with git through HTTPS protocol,you could do that by erasing your credentials every time you want to change the commit's author and email.
@@ -44,11 +44,13 @@ open config
 
 Add the following lines that'll work to configure the git host that the key will be linked to
 
+```sh
 #Personal Github Account
 Host github.com-<username>
 	HostName github.com # Here goes the domain for the Host
 	User git 
 	IdentityFile ~/.ssh/<ssh_key_file_name>
+```
 
 This is a basic workflow on how to start a git repo : 
 
@@ -77,12 +79,15 @@ $ git commit -m "<commit_message"
 ```
 You are ready to push to your remote branches by doing : 
 
+```sh
 $ git push origin 
+```
 
 If you haven't linked you local branch to a remote tracking branch the push won't work so for that you'll need to add the reference to the branch you want to push in your remote
 
+```sh
 $ git push -u <renote_name> <remote_tracking_branch>
-
+```
 
 ```sh
 # Use it to set your own Git email to a local repository
