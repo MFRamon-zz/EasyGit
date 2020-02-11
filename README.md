@@ -89,12 +89,14 @@ If you haven't linked you local branch to a remote tracking branch the push won'
 $ git push -u <renote_name> <remote_tracking_branch>
 ```
 
+
+## Easy Git Commands
 ```sh
 # Use it to set your own Git email to a local repository
-$ git config user.email "<email>"
+$ git config user.email <"email">
 
 # Use it to set your own Git username to a local repository
-$ git config user.name "<username>"
+$ git config user.name <"username">
 
 # Show the current configuration for your git repository such as the Fetch / Push URL, remote and local branches
 $ git remote show <remote>
@@ -144,7 +146,7 @@ $ git remote update —prune
 $ git checkout -- <path_to_file>
 
 # Stash the local changes in your working directory providing a description message with it
-$ git stash save "<stash_message>"
+$ git stash save <"stash_message">
 
 # List all the stashes you have stored locally
 $ git stash list
