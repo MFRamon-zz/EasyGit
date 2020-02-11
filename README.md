@@ -35,9 +35,12 @@ $ ssh-keygen -t rsa -C "<email_address>"
 ```
 
 After having the keys configured,inside you $HOME directory do the following :
-# cd ~/.ssh
-# touch config
-# open config
+
+```sh
+cd ~/.ssh
+touch config
+open config
+```
 
 Add the following lines that'll work to configure the git host that the key will be linked to
 
